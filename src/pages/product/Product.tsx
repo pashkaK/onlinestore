@@ -8,6 +8,7 @@ import Gallery from '../../components/Gallery/Gallery'
 import styles from './Product.module.scss'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 import { useActions } from '../../hooks/useActions'
+import RatingBar from '../../components/ui/RatingBar/RatingBar'
 
 const Product: FC = () => {
 	const params = useParams()
@@ -40,6 +41,7 @@ const Product: FC = () => {
 				}).format(product.price)}
 			</div>
 			<div className={styles.description}>{product.description}</div>
+			<RatingBar rating={product.rating} />
 			<Button
 				onClick={() =>
 					isInCart ? removeFromCart(Number(productId)) : addToCart(product)

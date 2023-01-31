@@ -4,7 +4,7 @@ import { IProduct, IProductsResponse } from '../types/IProduct'
 export const ProductsService = {
 	async getProducts() {
 		const response = await axios.get<IProductsResponse>(
-			'https://dummyjson.com/products',
+			'https://dummyjson.com/products/',
 			{
 				params: {
 					limit: 20

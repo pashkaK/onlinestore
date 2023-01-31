@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import { cartSlice } from './slice'
+import { cartSlice } from './cartSlice'
 import {
 	FLUSH,
 	PAUSE,

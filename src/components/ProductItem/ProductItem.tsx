@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import { IProduct } from '../../types/IProduct'
 import styles from './ProductItem.module.scss'
 import { Link } from 'react-router-dom'
+import RatingBar from '../ui/RatingBar/RatingBar'
 
 const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 	return (
@@ -22,6 +23,8 @@ const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 					maximumFractionDigits: 0
 				}).format(product.price)}
 			</div>
+			{/*<div className={styles.rating}>{product.rating}</div>*/}
+			<RatingBar rating={product.rating} />
 		</div>
 	)
 }

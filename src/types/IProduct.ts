@@ -3,6 +3,7 @@ export interface IProductsResponse {
 	limit: number
 	skip: number
 	total: number
+	query?: string
 }
 export interface IProduct {
 	id: number
